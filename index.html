@@ -4,43 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
-    <link rel="stylesheet" href="styles.css">  <!-- 引用外部 CSS 文件 -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
         <h1>Welcome to My Website</h1>
-        <p>Hi, I'm <strong>Runjia Li</strong>. I hope you enjoy my website!</p>
+        <p>Hi, I'm <strong>Runjia Li</strong>. I hope you enjoy my website and have a wonderful day!</p>
     </header>
 
     <section class="about">
-        <h2>About Me</h2>
-        <img src="images/myphoto.png" alt="My Photo" class="profile-photo"> <!-- 显示个人照片 -->
-        <p>
-            My name is <strong>Runjia Li</strong>. I am currently a senior undergraduate student at School of Mathematical Sciences, Peking University.
-        </p>
-    </section>
+        <div class="profile">
+            <!-- 左侧：个人照片和基本信息 -->
+            <img src="images/myphoto.png" alt="My Photo" class="profile-photo">
+            <div class="profile-info">
+                <h2>Runjia Li</h2>
+                <p>Email: <a href="mailto:your.email@example.com">lirunjia@stu.pku.edu.cn</a></p>
+                <p><a href="https://scholar.google.com/citations?user=yT1Fi1wAAAAJ&hl=en" target="_blank">Google Scholar Profile</a></p>
+            </div>
+        </div>
 
-    <!-- <section class="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
+        <div class="bio">
+            <!-- 右侧：简短介绍、研究、生活部分 -->
+            <h2>About Me</h2>
+            <p>My name is <strong>Runjia Li</strong>. I am currently a senior undergraduate student at School of Mathematical Sciences, Peking University.</p>
+            
+            <h2>Research</h2>
+            <p>My research interests emcompass Diffusion Models, Foundations of Machine Learning, AI for Science, and AI for Math</p>
+            
+            <h2>Life</h2>
+            <p>In my free time, I enjoy playing sports like tennis, football, and baseball. I also love reading books and exploring new technologies.</p>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </footer> -->
+    </footer>
 
-    <script src="script.js"></script> <!--引用外部 JavaScript 文件 -->
+    <script src="script.js"></script>
 </body>
 </html>
