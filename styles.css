@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    padding: 0 20px; /* 给页面添加左右内边距 */
 }
 
 /* Header styles */
@@ -26,6 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 40px 20px;
+    margin-left: 20px; /* 给 about 部分添加左侧外边距 */
 }
 
 /* Profile section - Left side */
@@ -34,6 +36,7 @@ header {
     flex-direction: column;
     align-items: center;
     max-width: 300px;
+    margin-left: 20px; /* 添加左侧外边距 */
 }
 
 .profile-photo {
@@ -68,7 +71,7 @@ header {
 
 /* Bio section - Right side */
 .bio {
-    flex-grow: 1; /* 右侧区域扩展占据剩余空间 */
+    flex-grow: 1;
     padding: 0 20px;
 }
 
@@ -92,4 +95,20 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;  /* 小屏幕时改为垂直排列 */
+        text-align: center;
+    }
+
+    .profile {
+        margin-bottom: 20px; /* 图片和个人信息之间有些间距 */
+    }
+
+    .bio {
+        padding: 0;
+    }
 }
