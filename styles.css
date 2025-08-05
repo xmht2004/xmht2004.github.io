@@ -112,3 +112,18 @@ footer {
         padding: 0;
     }
 }
+
+/* Email container styles for alignment */
+.email-container {
+    display: block;
+    margin-left: 0;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.email-container a {
+    display: block;
+    margin-left: 0;
+    text-indent: 0;
+    line-height: 1.4;
+}
