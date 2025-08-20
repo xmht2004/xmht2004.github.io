@@ -34,6 +34,11 @@
     box-sizing: border-box;
 }
 
+/* Remove underline from all links */
+a {
+    text-decoration: none;
+}
+
 /* Body and layout */
 body {
     font-family: Arial, sans-serif;
