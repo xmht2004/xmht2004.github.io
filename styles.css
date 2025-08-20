@@ -6,8 +6,8 @@
     --bg-footer: #333;
     --text-primary: #333;
     --text-secondary: white;
-    --link-color: #333;
-    --link-hover: #555;
+    --link-color: #1976d2;
+    --link-hover: #1565c0;
     --header-bg: #333;
     --profile-bg: transparent;
     --bio-bg: transparent;
@@ -20,8 +20,8 @@
     --bg-footer: #2d2d2d;
     --text-primary: #ffffff;
     --text-secondary: #e0e0e0;
-    --link-color: #4a9eff;
-    --link-hover: #66b3ff;
+    --link-color: #64b5f6;
+    --link-hover: #90caf9;
     --header-bg: #2d2d2d;
     --profile-bg: rgba(45, 45, 45, 0.1);
     --bio-bg: rgba(45, 45, 45, 0.1);
@@ -34,9 +34,23 @@
     box-sizing: border-box;
 }
 
-/* Remove underline from all links */
+/* Remove underline from all links and prevent visited color changes */
 a {
     text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+/* Ensure all link states use consistent colors */
+a:link,
+a:visited {
+    color: var(--link-color);
+}
+
+a:hover,
+a:active {
+    color: var(--link-hover);
+    text-decoration: underline;
 }
 
 /* Body and layout */
@@ -46,6 +60,7 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     padding: 0 20px;
+    margin: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -90,8 +105,10 @@ header {
 .about {
     display: flex;
     justify-content: space-between;
-    padding: 40px 20px;
+    padding: 20px;
     margin-left: 20px;
+    height: calc(100vh - 160px);
+    overflow: hidden;
     transition: background-color 0.3s ease;
 }
 
@@ -103,9 +120,10 @@ header {
     max-width: 300px;
     margin-left: 20px;
     background-color: var(--profile-bg);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+    height: fit-content;
 }
 
 .profile-photo {
@@ -135,25 +153,19 @@ header {
     transition: color 0.3s ease;
 }
 
-.profile-info a {
-    text-decoration: none;
-    color: var(--link-color);
-    transition: color 0.3s ease;
-}
-
-.profile-info a:hover {
-    text-decoration: underline;
-    color: var(--link-hover);
-}
+/* Profile info links inherit global link styles */
 
 /* Bio section - Right side */
 .bio {
-    flex-grow: 1;
-    padding: 0 20px;
+    flex: 1;
     background-color: var(--bio-bg);
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
+    margin-right: 20px;
     transition: background-color 0.3s ease;
+    height: fit-content;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 .bio h2 {
@@ -177,8 +189,9 @@ footer {
     text-align: center;
     padding: 10px 0;
     position: fixed;
-    width: 100%;
-    bottom: 0;
+    width: calc(100% - 40px);
+    bottom: 20px;
+    left: 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
